@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hud {
+    border:0;
+    padding: 16px;
+    color: white;
+    font-family: inherit;
+    position: absolute;
+    top: 0;
+    right:0;
+    font-family: 'Oswald', sans-serif;
+}
+
+ #nextport{
+    border: 0;
+    padding: 16px;
+    color:white;  
+    font-family: inherit;
+    position: absolute;
+    top: 0.1;
+    right: 0;
+    font-family: 'Oswald', sans-serif; 
+}
+
+#message{
+    border:0;
+    background-color: white;
+    color: black;
+    font-family: inherit;
+    padding: 6px;
+    position: absolute;
+    bottom: 0;
+    width: 160%;
+    overflow-x: scroll;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+#sailbutton {
+    border: 0;
+    background-color: #fb3640;
+    border-bottom: 4px solid #d8040f;
+    color: white;
+    font-family: inherit;
+    padding: 10px 20px;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow-x: auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+#sailbutton:focus {
+    background-color: #d8040f;
+    border-bottom-width: 0;
+    padding-top: 14px;
+}
+
+#viewport {
+    width: 640px;
+    height: 256px;
+    position: relative;
+    overflow-x: auto;
+    background-image: url('../images/water0.png');
+}
+
+#ports {
+    margin-top: 96px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#ports > .port {
+    width: 64px;
+    height: 32px;
+    background-image: url(../images/port.png);
+}
+
+#ship {
+    background-image: url(../images/ship.png);
+    width: 128px;
+    height: 64px;
+    position: absolute;
+}

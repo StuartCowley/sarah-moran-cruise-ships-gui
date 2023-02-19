@@ -1,4 +1,5 @@
-class Ship {
+(function exportShip() {
+  class Ship {
   constructor(itinerary) {
     this.itinerary = itinerary;
     this.currentPort = itinerary.ports[0];
@@ -27,6 +28,12 @@ class Ship {
     this.currentPort = itinerary.ports[previousPortIndex + 1];
     this.currentPort.addShip(this);
   }
-}
+  }
+  if (typeof module !== 'undefined' && module.exports){
+    module.exports = Ship;
+  } else {
+    window.Ship = Ship;
+  }
+})();
 
-module.exports = Ship;
+
